@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+include ../components/tabs/tabs
+
+block vars
+    -pageSettings.title = 'Главная';
+
+block content
+    main
+      +tabs()      
+
+append jsinfooter
+  script(src='static/js/separate-js/jquery-2.1.4.min.js')
+  script(src='static/js/separate-js/owl.carousel.min.js')
+  script(src='static/js/separate-js/common.js')

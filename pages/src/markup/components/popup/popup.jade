@@ -1,0 +1,13 @@
+mixin popup(data)
+    .popup()&attributes(attributes)      
+        .popup__window 
+          form.popup__form(action="/", novalidate)
+            .popup__close
+            .popup__title Вход
+            .popup__mail
+              input.popup__input(type="email", placeholder='Введите почту', name='email', required)
+              label.popup__error.popup__error--mail 
+            .popup__password
+              input.popup__input(type="password", placeholder='Введите пароль', name='password', required)
+              label.popup__error.popup__error--password
+            input.popup__submit(type="submit", value='Войти')

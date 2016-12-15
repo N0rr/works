@@ -1,0 +1,27 @@
+include ../popup/popup
+
+mixin header(data)
+    header.header()&attributes(attributes)
+      .header__menu.header__menu--open
+        .header__menu-wrap
+          ul.header__lang-list
+            each link in lang
+              li.header__lang-item
+                - if(link.active == undefined)
+                    a.header__lang-link.header__menu-link(href="#{jv0}")= link.text
+                - if(link.active != undefined)
+                    span.header__lang-active= link.current
+                    a.header__lang-link.header__menu-link(href="#{jv0}")= link.switch
+          .header__right-menu
+            a.header__on-board.header__menu-link(href="#{jv0}")
+              != jadeHelpers.Icon.call(locals, {iconName: '1', className: 'header__on-board-img', iconWidth: '20', iconHeight: '20'})
+              span.header__on-board-txt Онлайн-табло
+            a.header__login.header__menu-link(href="#{jv0}") Вход и регистрация
+      .header__elements-wrap
+        a.header__logo(href="index.html")        
+          img(src="static/img/content/site-logo.svg" alt="")
+        input.header__search(type="search", placeholder='поиск по сайту')        
+        div.header__menu-btn.header__menu-btn-close 
+      
+      +popup()
+          

@@ -1,0 +1,129 @@
+.tabs {
+    margin-top: 25px;
+}
+
+.tabs__list {
+    @include flex-row();
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    border-bottom: 1px solid $color-3;
+}
+
+.tabs__switch {
+    @include list-reset();
+
+    padding: 5px;
+    margin-bottom: -1px;
+
+    font-family: $font-1;
+    font-size: 15px;
+
+    border-top: 2px solid #fff;
+    border-bottom: 1px solid $color-3;
+    cursor: pointer;
+    background: #fff;
+    &--active {
+        padding-right: 4px;
+        padding-left: 4px;
+
+        color: $color-4;
+
+        border-top: 2px solid $color-4;
+        border-right: 1px solid $color-3;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid $color-3;
+    }
+}
+
+
+
+.tabs__container {
+    width: 100%;
+    max-width: $max-mobile;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.tabs__block {
+    display: none;
+}
+
+.tabs__block--active {
+    display: block;
+}
+
+
+@media #{$tablet-width} {
+    .tabs {
+        margin-top: 10px;
+    }
+    .tabs__list {
+        @include center();
+
+        justify-content: center;
+    }
+    .tabs__switch {
+        padding: 5px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+
+        font-size: 18px;
+    }
+
+    .tabs__switch--active {
+        padding-right: 14px;
+        padding-left: 14px;
+
+        border-right: 1px solid $color-3;
+        border-left: 1px solid $color-3;
+    }
+
+    .tabs__container {
+        width: 100%;
+        min-width: $min-tablet;
+        max-width: $max-tablet;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media #{$desktop-width} {
+    .tabs {
+        margin-top: -60px;
+    }
+
+    .tabs__list {
+        position: relative;
+        z-index: 9;
+
+        padding-left: 15px;
+    }
+
+    .tabs__switch {
+        padding-top: 9px;
+        padding-right: 14px;
+        padding-bottom: 28px;
+        padding-left: 14px;
+
+        font-size: 16px;
+
+        &--active {
+            padding-right: 13px;
+            padding-left: 13px;
+        }
+    }
+
+    .tabs__container {
+        min-width: $min-desktop;
+        max-width: 1100px;
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+}

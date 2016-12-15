@@ -1,0 +1,12 @@
+mixin slider(data, clsN)
+  +b(class='#{clsN}')()&attributes(attributes)
+    +e.__items
+      each slide in data
+        +e.__item
+          h2(class='#{clsN}__small-title')= slide.h2
+          h1(class='#{clsN}__title')= slide.h1 
+            span(class='#{clsN}__icon')
+          p(class='#{clsN}__desc')= slide.p
+  +b(class='#{clsN}__arrows')
+    +e.__prev
+    +e.__next

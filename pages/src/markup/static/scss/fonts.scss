@@ -1,0 +1,23 @@
+/* Your custom fonts here */
+
+@include font-face('PT Sans', '../fonts/PT Sans', normal, italic, $exts: woff woff2 ttf);
+@include font-face('PT Sans-b', '../fonts/PT Sans Bold', normal, italic, $exts: woff woff2 ttf);
+
+@include font-face('helios-thin', '../fonts/helios-thin', normal, italic, $exts: ttf);
+@include font-face('helios-light', '../fonts/helios-light', normal, italic, $exts: ttf);
+
+/* Example
+
+@include font-face('Open Sans', '../fonts/OpenSans-Italic', normal, italic, $exts: woff woff2 ttf);
+
+// Var for using custom font
+$font-1: 'Open Sans', Helvetica, Arial, sans-serif;
+*/
+
+
+$font-1: PT Sans , Helvetica, Arial, sans-serif;
+$font-1-bold: PT Sans-b , Helvetica, Arial, sans-serif;
+
+$font-2: helios-thin , Helvetica, Arial, sans-serif;
+$font-2-light: helios-light , Helvetica, Arial, sans-serif;
+

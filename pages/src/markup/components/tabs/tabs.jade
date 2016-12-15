@@ -1,0 +1,18 @@
+include ../slider/slider
+
+mixin tabs(data)
+    section.tabs()&attributes(attributes)
+      ul.tabs__list
+        each item in tabs
+          - if(item.active != undefined)
+              li.tabs__switch.tabs__switch--active(id='#{item.id}')= item.name
+          - if(item.active == undefined)
+              li.tabs__switch(id='#{item.id}')= item.name
+      ul.tabs__container
+        li.tabs__block.tabs__block-1.tabs__block--active
+          +slider(indexSlider,'slider')
+        li.tabs__block.tabs__block-2
+          p.tabs__block-info  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem error, libero sunt laudantium similique. Est quasi inventore, porro necessitatibus nihil laboriosam non, ratione odio repellendus, error esse, provident natus eius. 
+        li.tabs__block.tabs__block-3
+          p.tabs__block-privilege  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, aliquam. Assumenda delectus illum minus voluptates, quis unde iusto consectetur deleniti consequatur repudiandae eum omnis tenetur inventore iste, quo ad asperiores!
+            
