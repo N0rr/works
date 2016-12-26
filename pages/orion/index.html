@@ -14,7 +14,7 @@
         <meta name="HandheldFriendly" content="true">
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/main6tgwvgijjvjixfhnz5mi.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/maina614q82tdr4p59n97ldi.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <meta property="og:title" content="default title">
         <meta property="og:title" content="">
@@ -156,7 +156,7 @@
                     <div class="price__items-container">
                         <ul class="price__items-type">
                             <li class="price__type">
-                                <input type="radio" name="тип укладки грунта" id="просто асфальтирование" value="просто асфальтирование" class="price__type-input">
+                                <input type="radio" name="тип укладки грунта" id="просто асфальтирование" value="просто асфальтирование" class="price__type-input price__type-input--just-asp">
                                 <label for="просто асфальтирование" class="price__type-checkbox">
                                     <div class="price__type-img">
                                         <div class="price__type-img-inset"></div>
@@ -210,7 +210,7 @@
                                 </label>
                             </li>
                             <li class="price__type">
-                                <input type="radio" name="тип укладки грунта" id="свой вариант" value="свой вариант" class="price__type-input">
+                                <input type="radio" name="тип укладки грунта" id="свой вариант" value="свой вариант" class="price__type-input price__type-input--his">
                                 <label for="свой вариант" class="price__type-checkbox">
                                     <div class="price__type-img">
                                         <div class="price__type-img-inset"></div>
@@ -223,16 +223,20 @@
                             <li id="type1" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                        <div class="price__type-value-block">
-                                            <div class="price__type-value price__type-just-asphalt">0 см</div>
-                                        </div>
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                 </div>
                                 <div class="price__info-block">
                                     <h1 title="просто асфальтирование" class="price__info-title">просто асфальтирование</h1>
-                                    <label class="price__asphalt-top-title">Асфальт верхний слой</label>
-                                    <input type="range" max="100" value="0" class="price__asphalt-top">
+                                    <div class="price__asphalt-range-block">
+                                        <label for="Асфальт верхний слой" class="price__asphalt-top-title">Асфальт верхний слой</label>
+                                        <div class="price__asp-value-block">
+                                            <input type="text" id="Асфальт верхний слой" name="Просто асфальтирование" value="0" disabled class="price__input-just-asp">
+                                        </div>
+                                        <div class="price__asphalt-range">
+                                            <div class="ui-slider-range"></div><span class="ui-slider-handle price__asp-range"></span>
+                                        </div>
+                                    </div>
+                                    <div class="price__asphalt-top"></div>
                                     <p class="price__info-text">Данный вариант используется при ремонте дорожной одежды. Если ландшафт территории на которой будет производится ремонт позволяет не фрезеровать старый слой покрытия, то с согласия заказчика, новый слой асфальтобетона
                                         укладывается поверх старого. Это укрепит несущую функцию основания.</p>
                                     <p class="price__info-text">Если конечно, первичное основание было выполнено корректно.</p>
@@ -241,8 +245,7 @@
                             <li id="type2" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                     <div class="price__macadam"></div>
                                 </div>
                                 <div class="price__info-block">
@@ -255,8 +258,7 @@
                             <li id="type3" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                     <div class="price__macadam"></div>
                                     <div class="price__sand price__sand-type-3"></div>
                                 </div>
@@ -269,8 +271,7 @@
                             <li id="type4" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                     <div class="price__concrete"></div>
                                     <div class="price__macadam"></div>
                                     <div class="price__sand price__sand-type-4"></div>
@@ -285,8 +286,7 @@
                             <li id="type5" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                     <div class="price__concrete"></div>
                                     <div class="price__screed"></div>
                                     <div class="price__macadam"></div>
@@ -302,8 +302,7 @@
                             <li id="type6" class="price__item-block">
                                 <div class="price__type-block">
                                     <div class="price__sky"></div>
-                                    <div class="price__asphalt">
-                                    </div>
+                                    <div class="price__asphalt"></div>
                                     <div class="price__concrete"></div>
                                     <div class="price__screed"></div>
                                     <div class="price__macadam"></div>
@@ -323,38 +322,78 @@
                                 <div class="price__info-block">
                                     <h1 title="свой вариант" class="price__info-title">свой вариант</h1>
                                     <div class="price__his">
-                                        <label for="Фрезерование" class="price__input-ttl">Фрезерование</label>
-                                        <input type="range" step="10" min="10" max="200" value="0" name="Фрезерование" id="Фрезерование" class="price__input">
-                                        <label for="Снятие грунта" class="price__input-ttl">Снятие грунта</label>
-                                        <input type="range" step="10" min="10" max="200" value="0" name="Снятие грунта" id="Снятие грунта" class="price__input">
-                                        <label for="толщина песок" class="price__input-ttl">толщина песок</label>
-                                        <input type="range" step="10" min="10" max="100" value="30" name="толщина песок" id="толщина песок" class="price__input">
-                                        <label for="толщина нижнего слоя основания щебень" class="price__input-ttl">толщина нижнего слоя основания щебень</label>
-                                        <input type="range" step="10" min="" max="50" value="30" name="толщина нижнего слоя основания щебень" id="толщина нижнего слоя основания щебень" class="price__input">
-                                        <label for="толщина верхнего слоя основания щебень" class="price__input-ttl">толщина верхнего слоя основания щебень</label>
-                                        <input type="range" step="10" min="" max="50" value="0" name="толщина верхнего слоя основания щебень" id="толщина верхнего слоя основания щебень" class="price__input">
-                                        <label for="асфальт нижний слой" class="price__input-ttl">асфальт нижний слой</label>
-                                        <input type="range" step="10" min="10" max="20" value="15" name="асфальт нижний слой" id="асфальт нижний слой" class="price__input">
-                                        <label for="асфальт верхний слой" class="price__input-ttl">асфальт верхний слой</label>
-                                        <input type="range" step="10" min="10" max="20" value="0" name="асфальт верхний слой" id="асфальт верхний слой" class="price__input">
-                                        <label for="бетонирование" class="price__input-ttl">бетонирование</label>
-                                        <input type="range" step="10" min="10" max="20" value="0" name="бетонирование" id="бетонирование" class="price__input">
-                                        <ul class="price__input-values">
-                                            <li class="price__input-value"> <span class="price__value-number">0 cм</span>
+                                        <ul class="price__ranges">
+                                            <li class="price__input-item">
+                                                <label for="Фрезерование" class="price__input-ttl">Фрезерование</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="Фрезерование" id="Фрезерование" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">0 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="Снятие грунта" class="price__input-ttl">Снятие грунта</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="Снятие грунта" id="Снятие грунта" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">30 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="толщина песок" class="price__input-ttl">толщина песок</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="толщина песок" id="толщина песок" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">30 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="толщина нижнего слоя основания щебень" class="price__input-ttl">толщина нижнего слоя основания щебень</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="толщина нижнего слоя основания щебень" id="толщина нижнего слоя основания щебень" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">0 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="толщина верхнего слоя основания щебень" class="price__input-ttl">толщина верхнего слоя основания щебень</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="толщина верхнего слоя основания щебень" id="толщина верхнего слоя основания щебень" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">15 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="асфальт нижний слой" class="price__input-ttl">асфальт нижний слой</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="асфальт нижний слой" id="асфальт нижний слой" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">0 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="асфальт верхний слой" class="price__input-ttl">асфальт верхний слой</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="асфальт верхний слой" id="асфальт верхний слой" value="0" readonly required class="price__value-number">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
-                                            <li class="price__input-value"> <span class="price__value-number">0 cм</span>
+                                            <li class="price__input-item">
+                                                <label for="бетонирование" class="price__input-ttl">бетонирование</label>
+                                                <div class="price__input-value">
+                                                    <input type="text" name="бетонирование" id="бетонирование" value="0" readonly class="price__value-number price__undefined">
+                                                </div>
+                                                <div class="price__in">
+                                                    <div class="ui-slider-range"></div><span class="ui-slider-handle"></span>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -426,7 +465,7 @@
                         </li>
                         <li class="price__asphalt-area">
                             <label for="площадь асфальтируемой поверхности" class="price__asp-area-ttl">Укажите площадь всей асфальтируемой поверхности</label>
-                            <input type="text" name="площадь асфальтируемой поверхности" id="площадь асфальтируемой поверхности" pattern="^[ 0-9]+$" placeholder="450...........................................м&sup2;" class="price__asp-area-input">
+                            <input type="text" name="площадь асфальтируемой поверхности" id="площадь асфальтируемой поверхности" pattern="^[ 0-9]+$" required placeholder="450...........................................м&sup2;" class="price__asp-area-input">
                         </li>
                         <li class="price__submit-item">
                             <input type="submit" value="ПОЛУЧИТЬ СМЕТУ" class="price__submit">
@@ -506,7 +545,7 @@
                 </div>
             </section>
             <section class="faq">
-                <h2 class="faq__title">ЧАСТО ЗАДАВАЕНИЕ ВОПРОСЫ</h2>
+                <h2 class="faq__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
                 <div class="faq__list-container">
                     <ul id="accordion" class="faq__list">
                         <li>
@@ -672,7 +711,7 @@
                 </div>
             </footer>
         </div>
-        <script src="static/js/main6tgwvgijjvjixfhnz5mi.min.js"></script>
+        <script src="static/js/maina614q82tdr4p59n97ldi.min.js"></script>
 
 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
