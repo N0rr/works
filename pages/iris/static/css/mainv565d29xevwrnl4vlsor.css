@@ -806,7 +806,7 @@ html, body {
 
 .action__arrow {
   display: none;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -417px -130px;
   width: 42px;
   height: 47px;
@@ -854,7 +854,7 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .action__info {
@@ -978,7 +978,7 @@ html, body {
 
 @media (min-width: 768px) {
   .and-do__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 30px;
     display: -webkit-box;
@@ -1010,7 +1010,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .and-do__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 50px;
     margin-bottom: 25px;
   }
@@ -1083,7 +1083,7 @@ html, body {
 }
 
 .clients__prev {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -67px;
   width: 11px;
   height: 25px;
@@ -1093,7 +1093,7 @@ html, body {
 }
 
 .clients__next {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -96px;
   width: 11px;
   height: 25px;
@@ -1148,7 +1148,7 @@ html, body {
 
 @media (min-width: 768px) {
   .clients__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 40px;
   }
@@ -1169,7 +1169,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .clients__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 50px;
   }
   .clients__ttl {
@@ -1246,7 +1246,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .delivery__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 65px;
     margin-right: 380px;
     padding-bottom: 70px;
@@ -1348,7 +1348,7 @@ html, body {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 728px;
+    max-width: 728px;
     padding: 0;
     margin: auto;
     margin-bottom: 30px;
@@ -1458,7 +1458,7 @@ html, body {
 .footer__phone:before {
   content: '';
   display: inline-block;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -463px -130px;
   width: 15px;
   height: 15px;
@@ -1561,7 +1561,7 @@ html, body {
 
 @media (min-width: 768px) {
   .footer__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .footer__top-items {
@@ -1610,7 +1610,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .footer__wrap {
-    width: 1170px;
+    max-width: 1170px;
     padding-top: 35px;
   }
   .footer__phone {
@@ -1683,7 +1683,7 @@ html, body {
     background-position: 45%;
   }
   .guarantees__wrap {
-    width: 728px;
+    max-width: 728px;
     padding-top: 60px;
     padding-bottom: 40px;
     margin: auto;
@@ -1844,7 +1844,7 @@ html, body {
   content: '';
   display: inline-block;
   margin-right: 10px;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -463px -163px;
   width: 10px;
   height: 13px;
@@ -1856,7 +1856,7 @@ html, body {
   content: '';
   display: inline-block;
   margin-right: 10px;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -463px -149px;
   width: 14px;
   height: 10px;
@@ -1935,7 +1935,7 @@ html, body {
 .header__nbr:before {
   content: '';
   display: inline-block;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -463px -130px;
   width: 15px;
   height: 15px;
@@ -1978,7 +1978,7 @@ html, body {
             flex-direction: row;
     padding-bottom: 10px;
     padding-top: 20px;
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .header__logo-block {
@@ -2095,8 +2095,8 @@ html, body {
 
 @media (min-width: 1230px) {
   .header__wrap {
-    width: 1170px;
-    padding: 30px;
+    max-width: 1170px;
+    padding: 25px;
     padding-bottom: 0;
   }
   .header__logo-block {
@@ -2303,7 +2303,7 @@ html, body {
 
 @media (min-width: 768px) {
   .order-p__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 30px;
   }
@@ -2333,7 +2333,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .order-p__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 60px;
   }
   .order-p__ttl {
@@ -2428,7 +2428,7 @@ html, body {
 
 @media (min-width: 768px) {
   .order-p2__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .order-p2__ttl {
@@ -2450,7 +2450,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .order-p2__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 35px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2672,7 +2672,7 @@ html, body {
 
 @media (min-width: 768px) {
   .ourService__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 30px;
   }
@@ -2755,7 +2755,7 @@ html, body {
 .price-s__edit-prev {
   content: '';
   display: block;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -67px;
   width: 11px;
   height: 25px;
@@ -2770,7 +2770,7 @@ html, body {
 .price-s__edit-next {
   content: '';
   display: block;
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -96px;
   width: 11px;
   height: 25px;
@@ -2840,7 +2840,7 @@ html, body {
 
 @media (min-width: 768px) {
   .price-s__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 40px;
   }
@@ -2884,7 +2884,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .price-s__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 30px;
   }
   .price-s__ttl {
@@ -3033,7 +3033,7 @@ html, body {
 
 @media (min-width: 768px) {
   .print-info__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .print-info__print-ttl {
@@ -3057,142 +3057,6 @@ html, body {
     max-width: none;
     text-transform: uppercase;
     padding: 25px;
-  }
-}
-
-.print-shirts {
-  background: #005564 url(../img//content/print-shirts.jpg) no-repeat 35%;
-  background-size: cover;
-}
-
-.print-shirts__wrap {
-  padding: 20px;
-  padding-bottom: 50px;
-  width: 280px;
-  margin-left: auto;
-}
-
-.print-shirts__ttl {
-  font-size: 26px;
-  text-align: right;
-  font-family: UbuntuBold, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  margin-top: 80px;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-  margin-bottom: 0;
-}
-
-.print-shirts__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.print-shirts__medal {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
-  background-position: -417px -67px;
-  width: 48px;
-  height: 59px;
-  background-size: 480px, 413px;
-  background-repeat: no-repeat;
-}
-
-.print-shirts__txt {
-  font-family: RobotoRegular, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  text-align: right;
-  color: #fff;
-  text-shadow: 1px 1px 1px black;
-}
-
-.print-shirts__link {
-  margin-top: 20px;
-  display: block;
-  color: #ffa200;
-  font-family: RobotoBold, Helvetica, Arial, sans-serif;
-  font-size: 22px;
-  border: 4px solid #ffa200;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  text-shadow: 1px 1px 2px black;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-
-.print-shirts__link:hover {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  background: #ffa200;
-  color: #fff;
-}
-
-.print-shirts__link:active {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  opacity: 0.5;
-}
-
-@media (min-width: 768px) {
-  .print-shirts__wrap {
-    width: 728px;
-    margin: auto;
-  }
-  .print-shirts__link {
-    width: 280px;
-    margin-left: auto;
-  }
-}
-
-@media (min-width: 1230px) {
-  .print-shirts {
-    background-position: 65%;
-  }
-  .print-shirts__wrap {
-    width: 1170px;
-    padding-top: 35px;
-    padding-bottom: 135px;
-  }
-  .print-shirts__ttl {
-    font-size: 36px;
-    text-transform: uppercase;
-    text-shadow: none;
-    line-height: 54px;
-    padding-right: 165px;
-  }
-  .print-shirts__txt {
-    font-size: 26px;
-    line-height: 39px;
-    text-shadow: none;
-    margin-top: 7px;
-    padding-right: 170px;
-  }
-  .print-shirts__medal {
-    margin-top: -10px;
-    margin-right: 20px;
-  }
-  .print-shirts__link {
-    width: 370px;
-    margin-top: 5px;
-    text-shadow: none;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-right: 165px;
   }
 }
 
@@ -3251,7 +3115,7 @@ html, body {
 }
 
 .printL__coin {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -417px 0px;
   width: 63px;
   height: 63px;
@@ -3298,7 +3162,7 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 728px;
+    max-width: 728px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3331,7 +3195,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .printL__wrap {
-    width: 1170px;
+    max-width: 1170px;
     padding: 30px;
     padding-bottom: 0;
     -webkit-box-align: start;
@@ -3374,6 +3238,143 @@ html, body {
     width: 365px;
     margin-right: 2px;
     margin-top: 28px;
+  }
+}
+
+.print-shirts {
+  background: #005564 url(../img//content/print-shirts.jpg) no-repeat 35%;
+  background-size: cover;
+}
+
+.print-shirts__wrap {
+  padding: 20px;
+  padding-bottom: 50px;
+  width: 280px;
+  margin-left: auto;
+}
+
+.print-shirts__ttl {
+  font-size: 26px;
+  text-align: right;
+  font-family: UbuntuBold, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-top: 80px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  margin-bottom: 0;
+}
+
+.print-shirts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.print-shirts__medal {
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
+  background-position: -417px -67px;
+  width: 48px;
+  height: 59px;
+  background-size: 480px, 413px;
+  background-repeat: no-repeat;
+}
+
+.print-shirts__txt {
+  font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: right;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+.print-shirts__link {
+  margin-top: 20px;
+  display: block;
+  color: #ffa200;
+  font-family: RobotoBold, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  border: 4px solid #ffa200;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-shadow: 1px 1px 2px black;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.print-shirts__link:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background: #ffa200;
+  color: #fff;
+}
+
+.print-shirts__link:active {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .print-shirts__wrap {
+    max-width: 728px;
+    width: auto;
+    margin: auto;
+  }
+  .print-shirts__link {
+    width: 280px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1230px) {
+  .print-shirts {
+    background-position: 65%;
+  }
+  .print-shirts__wrap {
+    max-width: 1170px;
+    padding-top: 35px;
+    padding-bottom: 135px;
+  }
+  .print-shirts__ttl {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-shadow: none;
+    line-height: 54px;
+    padding-right: 165px;
+  }
+  .print-shirts__txt {
+    font-size: 26px;
+    line-height: 39px;
+    text-shadow: none;
+    margin-top: 7px;
+    padding-right: 170px;
+  }
+  .print-shirts__medal {
+    margin-top: -10px;
+    margin-right: 20px;
+  }
+  .print-shirts__link {
+    width: 370px;
+    margin-top: 5px;
+    text-shadow: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 165px;
   }
 }
 
@@ -3507,7 +3508,7 @@ html, body {
 
 @media (min-width: 768px) {
   .rewiews__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 30px;
   }
@@ -3591,7 +3592,7 @@ html, body {
 
 @media (min-width: 768px) {
   .text__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
   }
   .text__ttl {
@@ -3612,7 +3613,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .text__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 45px;
     padding-left: 40px;
   }
@@ -3753,7 +3754,7 @@ html, body {
 
 @media (min-width: 768px) {
   .video__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 20px;
   }
@@ -3871,7 +3872,7 @@ html, body {
 }
 
 .why-s__item-img--like {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: 0px 0px;
   width: 135px;
   height: 135px;
@@ -3880,7 +3881,7 @@ html, body {
 }
 
 .why-s__item-img--price {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: 0px -139px;
   width: 135px;
   height: 135px;
@@ -3889,7 +3890,7 @@ html, body {
 }
 
 .why-s__item-img--car {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -139px -139px;
   width: 135px;
   height: 135px;
@@ -3899,7 +3900,7 @@ html, body {
 
 @media (min-width: 768px) {
   .why-s__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 40px;
   }
@@ -3933,7 +3934,7 @@ html, body {
 
 @media (min-width: 1230px) {
   .why-s__wrap {
-    width: 1170px;
+    max-width: 1170px;
     margin-top: 50px;
   }
   .why-s__ttl {
@@ -4061,7 +4062,7 @@ html, body {
 }
 
 .whyP__prev {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -67px;
   width: 11px;
   height: 25px;
@@ -4070,7 +4071,7 @@ html, body {
 }
 
 .whyP__next {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -469px -96px;
   width: 11px;
   height: 25px;
@@ -4079,7 +4080,7 @@ html, body {
 }
 
 .whyP__img--item1 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -278px -278px;
   width: 135px;
   height: 135px;
@@ -4088,7 +4089,7 @@ html, body {
 }
 
 .whyP__img--item2 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: 0px -278px;
   width: 135px;
   height: 135px;
@@ -4097,7 +4098,7 @@ html, body {
 }
 
 .whyP__img--item3 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -139px -278px;
   width: 135px;
   height: 135px;
@@ -4106,7 +4107,7 @@ html, body {
 }
 
 .whyP__img--item4 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -139px 0px;
   width: 135px;
   height: 135px;
@@ -4115,7 +4116,7 @@ html, body {
 }
 
 .whyP__img--item5 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -278px 0px;
   width: 135px;
   height: 135px;
@@ -4124,7 +4125,7 @@ html, body {
 }
 
 .whyP__img--item6 {
-  background-image: url(../img/png-sprite/96dpi/spritemvcga9t0oopzgx03sor.png);
+  background-image: url(../img/png-sprite/96dpi/spritev565d29xevwrnl4vlsor.png);
   background-position: -278px -139px;
   width: 135px;
   height: 135px;
@@ -4134,7 +4135,7 @@ html, body {
 
 @media (min-width: 768px) {
   .whyP__wrap {
-    width: 728px;
+    max-width: 728px;
     margin: auto;
     margin-top: 30px;
   }
