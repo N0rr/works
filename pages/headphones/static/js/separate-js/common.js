@@ -125,7 +125,7 @@ var advgsSlider = function() {
   var id = advgID;  
   var owlContainer = advgOwlContainer;
   var removeSlider = id.querySelector('.owl-stage-outer');  
-  var advgsDots = document.querySelector('.advgs__indicators');
+  var advgsDots = document.querySelector('.advg__indicators');
   
   if (itemsD.classList.contains('slider__carousel')) {   
     advgOwlContainer = removeSlider;   
@@ -159,7 +159,7 @@ var advgsSlider = function() {
           items: 1,
           margin: 0,
           pagination: false,    
-          dotsContainer: '.advgs__indicators',
+          dotsContainer: '.advg__indicators',
           pullDrag: true,
           mouseDrag: true          
         });       
