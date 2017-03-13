@@ -1,0 +1,31 @@
+mixin que-input(data, cmnData)   
+    li.que-block__input-item      
+      label.que-block__label(data='que-block__#{data.dataclass}')
+        if (data.checked)        
+          input.que-block__input(            
+            class='que-block__#{data.dataclass}', 
+            type="#{cmnData.type}", 
+            name='#{cmnData.question}', 
+            data-skip='#{data.dataSkip}',             
+            data-next='que-block__item--#{data.dataNext}',
+            value='#{data.answer}',
+            disabled,
+            required,
+            checked            
+          )
+        else
+          input.que-block__input(
+            class='que-block__#{data.dataclass}', 
+            type="#{cmnData.type}", 
+            name='#{cmnData.question}', 
+            data-skip='#{data.dataSkip}', 
+            data-next='que-block__item--#{data.dataNext}'   
+            value='#{data.answer}',
+            disabled,
+            required
+          )        
+        span.que-block__input-checkbox.que-block__checkbox(data='que-block__#{data.dataclass}')
+        div.que-block__input-checkbox.que-block__block-info(data='que-block__#{data.dataclass}')
+          span.que-block__input-checkbox.que-block__info(data='que-block__#{data.dataclass}')= data.answer
+          -if(data.answerTxt)
+            span.que-block__input-checkbox.que-block__info-txt(data='que-block__#{data.dataclass}')= data.answerTxt

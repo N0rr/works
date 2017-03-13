@@ -1,0 +1,18 @@
+include /more-info/more-info
+include /que-input/que-input
+mixin que(data, index)    
+    li.que.que-block__item(class='que-block__item--#{data.queClass}', data-next-default='que-block__item--#{data.dataNextDefault}')
+      span.que-block__current-que 
+      | Вопрос <span class='que-block__current-nbr'></span> из 7   
+      div.que-block__que-wrap
+        span.que-block__que= data.question   
+        -if(data.moreInfo)
+          span.que-block__more-info-btn(class='que-block__more-info-btn--#{data.queClass}')
+      - if(data.moreInfo)        
+        +more-info(data.moreInfo, data)        
+      ul.que-block__items 
+        each val, i in questions
+          each item in val.data          
+            -if(i == index)            
+              +que-input(item, data, i)              
+      

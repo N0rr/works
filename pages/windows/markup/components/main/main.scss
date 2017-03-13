@@ -1,0 +1,8 @@
+.main {
+  @include flex-row;
+  margin-top: 50px;
+}
+
+.question-block {
+  width: 715px;
+}

@@ -1,0 +1,41 @@
+.header {
+  @include flex-row;
+  padding-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.header__logo-txt {
+  display: block;  
+}
+
+.header__info {  
+  font-family: $font-1-b;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.header__contact {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__number {
+  display: block;
+  font-size: 27.30px;  
+}
+
+.header__nbr-code {
+  color: $color-1;
+}
+
+.header__cont-txt {
+  display: inline-block;
+  border-bottom: 1px dashed #fff;
+  line-height: 15px;
+}

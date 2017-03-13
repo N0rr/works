@@ -1,0 +1,39 @@
+.start-window {
+  display: none;
+  color: #fff;
+  margin-top: 50px;  
+}
+
+.start-window__active {
+  display: block;
+}
+
+.start-window__ttl {
+  font-size: 32px;
+  text-align: center;  
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.start-window__ttl-b {
+  color: $color-1;
+}
+
+.start-window__items {
+  @include nl;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.start-window__ttl {
+  display: inline-block;
+}
+
+.start-window__start {
+  @include btn;
+  width: 332px;
+  font-size: 16px;
+  margin-top: 60px;
+  margin-left: 120px;
+}
+

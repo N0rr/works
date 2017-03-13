@@ -1,0 +1,104 @@
+@keyframes showque {
+  0% {
+    
+    opacity: 0.1;
+  }
+  100% {
+    
+  }
+} 
+
+.que-block__item {
+  display: none;
+}
+.que-block__current-que {
+  font-size: 16px;  
+}
+
+.que-block__que-wrap {
+  @include flex-row;    
+  align-items: center; 
+  margin-top: 20px;
+}
+
+.que-block__que {
+  font-size: 22px;  
+  margin-right: 10px;
+}
+
+.que-block__more-info-btn {
+  @include bg($icon-info);
+  cursor: pointer;
+}
+
+.que-block__items {
+  @include nl;
+  margin-top: 30px;
+  padding-left: 19px;
+}
+
+.que-block__item--active {
+  display: block;
+  animation: showque 0.8s;
+}
+
+.quer-block__item--selected {
+  
+}
+
+.que-block__input-item {
+  margin-bottom: 20px;
+}
+
+.que-block__label {
+  @include flex-row;  
+}
+
+.que-block__input {
+  display: none;
+}
+
+.que-block__checkbox {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: $color-1;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 15px;
+  transition: 0.2s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.que-block__input:checked + .que-block__checkbox {  
+  background: $color-1 url(%=static=%/content/checked.png)no-repeat 50%;
+}
+
+.que-block__block-info {
+  max-width: 630px;
+}
+
+.que-block__info {
+  font-size: 28px;  
+}
+
+.que-block__info-txt {
+  display: block;
+  font-family: $font-1-l;
+  font-size: 18px;
+}
+
+.que-block__btn-next {
+  @include btn;
+  font-size: 18px;
+  width: 330px;
+  margin-left: 0;
+  margin-top: 45px;
+  display: none;
+}
+
+.que-block__btn-next--active {
+  display: block;
+}

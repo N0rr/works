@@ -1,0 +1,15 @@
+mixin side-bar(data)
+    ul.side-bar.sider-bar__items
+      li.side-bar__item.side-bar__your-discont
+        span.side-bar__ttl Ваша скидка
+        div.side-bar__discont
+          span.side-bar__discont-value 0
+          span.side-bar__discont-txt %
+        p.side-bar__txt за экономию времени нашего менеджера
+      li.side-bar__item
+        span.side-bar__ttl Есть вопросы ?
+        p.side-bar__txt Оставьте ваши данные для консультации
+        form(action="")
+          input.side-bar__input(type="text", placeholder='+7(___)___-__-__')
+          input.side-bar__submit(type="submit", value='Нужна консультация')
+        

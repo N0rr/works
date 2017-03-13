@@ -1,0 +1,12 @@
+mixin choise-window(data)
+    .choise-window
+      span.choise-window__current-que Вопрос 1 из 7
+      span.choise-window__que Где планируете ставить окно ?
+      ul.choise-window__items
+        each item in choiseWindow
+          li.choise-window__item
+            label.choise-window__label
+              input.choise-window__input(class='choise-window__#{item.class}', type="radio", name='#{item.name}', data='#{item.data}')
+              span.choise-window__checkbox(data='choise-window__#{item.class}')
+              span.choise-window__info= item.value 
+      a.choise-window__btn-next(href="#")

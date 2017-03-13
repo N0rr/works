@@ -1,0 +1,14 @@
+include /que/que
+mixin que-block(data)
+    ul.que-block
+      for ques, i in questions
+        +que(ques, i)
+      a.que-block__btn-next(href="#") Следующий шаг
+      li.que-block__item.que-block__item--que-last
+        span.que-block__last-txt.que-block__last-ttl Вы ответили на все вопросы!
+        span.que-block__last-txt Ваша скидка:
+        div.que-block__last-discont <span class='que-block__last-discont-value'>27</span>%
+        span.que-block__last-txt.que-block__last-nbt-txt Введите свой телефон
+        form.que-block__form(action="")
+          input.que-block__text-input(type="text", placeholder='+7(___)___-__-__')
+          input.que-block__submit(type="submit", placeholder='Получить скидку!')

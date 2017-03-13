@@ -1,0 +1,16 @@
+mixin more-info(data, cmnData)
+    div.more-info(class='more-info__#{cmnData.queClass}')
+      div.more-info__wrap
+        div.more-info__close(data='more-info__#{cmnData.queClass}')
+        span.more-info__ttl= data.ttl
+        div.more-info__slider-wrap
+          div.more-info__arrow-prev
+          ul.more-info__slider
+            each slide in data.slider
+              li.more-info__slider-item
+                img(src="%=static=%img/content/#{slide}.jpg", alt="")
+          div.more-info__arrow-next
+        p.more-info__txt= data.text
+        ul.more-info__items= data.listTtl
+          each item in data.list
+            li.more-info__item= item

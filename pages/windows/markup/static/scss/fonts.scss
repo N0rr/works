@@ -1,0 +1,49 @@
+/* Your custom fonts here */
+@include font-face('SlabMedium', '../fonts/PFAgoraSlabPro-Medium', normal, italic, $exts: woff woff2 ttf);
+@include font-face('SlabRegular', '../fonts/PFAgoraSlabPro-Reg', normal, italic, $exts: woff woff2 ttf);
+@include font-face('SlabLight', '../fonts/PFAgoraSlabPro-Light', normal, italic, $exts: woff woff2 ttf);
+@include font-face('SlabBold', '../fonts/PFAgoraSlabPro-Bold', normal, italic, $exts: woff woff2 ttf);
+
+
+$font-1-m: SlabMedium, Helvetica, Arial, sans-serif;
+$font-1: SlabRegular, Helvetica, Arial, sans-serif;
+$font-1-l: SlabLight , Helvetica, Arial, sans-serif;
+$font-1-b: SlabBold , Helvetica, Arial, sans-serif;
+
+$h1-m: 30px;
+$h2-m: 18px;
+$h3-m: 20px;
+$h4-m: 18px;
+$h5-m: 14px;
+
+$h1-t: 32px;
+$h2-t: 24px;
+$h3-t: 24px;
+$h4-t: 22px;
+$h5-t: 20px;
+
+$h1-d: 47px;
+$h2-d: 28px;
+$h3-d: 28px;
+$h4-d: 20px;
+$h5-d: 20px;
+
+
+
+
+/* Example
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/Custom-Font.eot');
+    src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Custom-Font.woff') format('woff'),
+         url('../fonts/Custom-Font.svg#custom_font') format('svg');
+    font-weight: 400;       // For normal width. It could has another value   
+    font-style: normal;     // Also could has another value
+    }
+
+
+// Var for using custom font
+$CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
+*/
