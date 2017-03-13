@@ -2,7 +2,7 @@
 
 var whyPItemAll = document.querySelectorAll('.whyP__item');
 var whyPItems = document.querySelector('.whyP__items');
-var whyOwlContainer;
+var whyOwlContainer = document.getElementById('whyP__slider').querySelector('.owl-stage-outer');
 
 var whySlider = function() {    
   var itemD = whyPItemAll;
@@ -15,7 +15,10 @@ var whySlider = function() {
   
   if (window.innerWidth < 768) {    
     if (!itemsD.classList.contains('slider__carousel')) { 
-      whyPItems.classList.add('slider__carousel', 'owl-theme', 'owl-loaded', 'owl-carousel');  
+      whyPItems.classList.add('slider__carousel');
+      whyPItems.classList.add('owl-theme');
+      whyPItems.classList.add('owl-loaded');
+      whyPItems.classList.add('owl-carousel');                        
       if (whyOwlContainer != null) {        
         itemsD.appendChild(whyOwlContainer);  
         var owlItem = document.getElementById('whyP__slider').querySelectorAll('.owl-item'); 
@@ -42,8 +45,11 @@ var whySlider = function() {
         });       
       });
     }   
-  } else if (itemsD.classList.contains('slider__carousel')) {
-      itemsD.classList.remove('slider__carousel', 'owl-carousel', 'owl-theme', 'owl-loaded'); 
+  } else if (itemsD.classList.contains('slider__carousel') || itemsD.classList.contains('owl-carousel')) {
+      itemsD.classList.remove('owl-carousel');
+      itemsD.classList.remove('owl-theme');
+      itemsD.classList.remove('owl-loaded');
+      itemsD.classList.remove('slider__carousel'); 
       itemsD.removeChild(removeSlider);                   
       Array.prototype.forEach.call(itemD, function(item) {
         itemsD.appendChild(item);
