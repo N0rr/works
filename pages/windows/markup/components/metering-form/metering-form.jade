@@ -1,0 +1,10 @@
+mixin metering-form(data)
+    .metering-form
+      div.metering-form__wrap
+        div.metering-form__form-block
+          form(action="")
+            span.metering-form__ttl БЕСПЛАТНЫЙ ЗАМЕР
+            p.metering-form__txt наш специалист <br> приедет в удобное <br> для вас время
+            input.metering-form__input.metering-form__name(type="text", placeholder='Ваше имя')
+            input.metering-form__input.metering-form__phone(type="text", placeholder='+7(___)___-__-__')
+            input.metering-form__submit(type="submit", value='Вызвать замерщика')

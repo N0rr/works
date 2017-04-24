@@ -1,0 +1,17 @@
+mixin option(data)
+    .option
+      .option__wrap
+        h1.option__ttl Дополнительные опции для пластиковых окон ПВХ
+        p.option__txt Кроме установки пластиковых окон мы также предлагаем дополнительные опции, <br> которые сделают использование ваших новых окон максимально комфортным и приятным
+        ul.option__items(id='option__slider')
+          each item in option
+            li.option__item
+              div.option__img-block
+                img.option__img(src="%=static=%img/content/icon-#{item.img}.jpg", alt="")
+              div.option__info
+                span.option__name!= item.name
+                p.option__item-txt= item.txt
+        div.option__indicators.indicators-hide
+          each item in option
+            div.option__indicator
+            

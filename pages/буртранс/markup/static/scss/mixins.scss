@@ -1,0 +1,236 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+    text-decoration: none;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+// $name - название для font-family
+// $path - путь к шрифту без формата
+// $weight - font-weight
+// $style - font-style
+// $exts - форматы шрифта, которые используются
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+
+@mixin clearfix {
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin center() {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+// Flex
+
+@mixin flex-row() {  
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex() {  
+  display: flex;
+  flex-direction: column;
+}
+
+
+// Fonts //////////////
+
+// Text
+
+@mixin text($size: 18px, $color: #fff, $line: auto, $weight: 400) {
+  font-family: $font-1, Arial, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  line-height: $line;
+}
+
+@mixin text-bold($size: 18px, $color: #fff, $line: auto, $weight: 400) {
+  font-family: $font-1-bold, Arial, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  line-height: $line;
+}
+
+@mixin text-l($size: 18px, $color: #fff, $line: auto, $weight: 400) {
+  font-family: $font-1-light, Arial, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  line-height: $line;
+}
+
+@mixin input() {
+  font-family: $font-1-l;
+  border: 2px solid #f2f2f2;
+  font-size: 15px;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  width: 225px;
+  margin-top: 20px;
+  color: $color-3;
+  transition: 0.3s ease;
+  outline: none;
+  &:hover {
+    transition: 0.3s ease;
+    border-color: $color-4;
+  }
+  &:focus {
+    transition: 0.3s ease;
+    border-color: $color-4;
+  }
+}
+
+@mixin ttl() {
+  @include center();  
+  font-family: $font-2-b;  
+  color: $color-6;  
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin btn() {
+  display: block;
+  color: $color-1;
+  text-decoration: none;
+  font-size: 14px;
+  background: $color-4;
+  border-radius: 4px;
+  width: 180px;
+  margin: auto;
+  text-align: center; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0px 3px 0px 0px $color-5;
+  &:hover {
+    transition: 0.3s ease;    
+    box-shadow: 0px 3px 0px 0px $color-4;
+    color: #fff;
+  }
+  &:active {
+    opacity: 0.7;
+    transition: 0.3s ease;       
+  }
+}
+
+@mixin dots() {
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  & .active {
+    background: $color-4;
+  } 
+}
+
+@mixin dot() {
+  display: block;
+  height: 7px;
+  width: 7px;
+  background: $color-1;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

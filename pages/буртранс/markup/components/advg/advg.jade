@@ -1,0 +1,11 @@
+mixin advg(data)
+    .advg
+      .advg__wrap-block
+        .advg__wrap        
+          h1.advg__ttl  Преимущества работы с нами
+          ul.advg__items
+            each item in advg
+              li.advg__item
+                div.advg__item-icon-block
+                  div.advg__item-icon
+                span.advg__item-txt= item.txt

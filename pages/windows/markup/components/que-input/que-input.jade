@@ -5,10 +5,9 @@ mixin que-input(data, cmnData)
           input.que-block__input(            
             class='que-block__#{data.dataclass}', 
             type="#{cmnData.type}", 
-            name='#{cmnData.question}', 
-            data-skip='#{data.dataSkip}',             
+            name='#{cmnData.question}',                       
             data-next='que-block__item--#{data.dataNext}',
-            value='#{data.answer}',
+            value='#{data.answer}',           
             disabled,
             required,
             checked            
@@ -17,15 +16,18 @@ mixin que-input(data, cmnData)
           input.que-block__input(
             class='que-block__#{data.dataclass}', 
             type="#{cmnData.type}", 
-            name='#{cmnData.question}', 
-            data-skip='#{data.dataSkip}', 
+            name='#{cmnData.question}',             
             data-next='que-block__item--#{data.dataNext}'   
-            value='#{data.answer}',
+            value='#{data.answer}',            
             disabled,
             required
           )        
-        span.que-block__input-checkbox.que-block__checkbox(data='que-block__#{data.dataclass}')
-        div.que-block__input-checkbox.que-block__block-info(data='que-block__#{data.dataclass}')
-          span.que-block__input-checkbox.que-block__info(data='que-block__#{data.dataclass}')= data.answer
+        span.que-block__input-checkbox.que-block__checkbox(
+          data='que-block__#{data.dataclass}')
+        div.que-block__input-checkbox.que-block__block-info(
+          data='que-block__#{data.dataclass}')
+          span.que-block__input-checkbox.que-block__info(
+            data='que-block__#{data.dataclass}')= data.answer
           -if(data.answerTxt)
-            span.que-block__input-checkbox.que-block__info-txt(data='que-block__#{data.dataclass}')= data.answerTxt
+            span.que-block__input-checkbox.que-block__info-txt(            
+              data='que-block__#{data.dataclass}')= data.answerTxt

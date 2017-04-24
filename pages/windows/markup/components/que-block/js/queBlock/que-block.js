@@ -7,6 +7,7 @@ var queBlockLast = document.querySelector('.que-block__item--que-last');
 var moreInfoAll = document.querySelectorAll('.more-info');
 var sideBarDiscont = document.querySelector('.side-bar__discont-value');
 var lastPageDiscont = document.querySelector('.que-block__last-discont-value');
+var sideBar = document.querySelector('.side-bar');
 
 var buttonNextQue = document.querySelector('.que-block__btn-next');
 
@@ -14,8 +15,7 @@ var queBlockActive = 'que-block__item--active';
 var startWindowActive = 'start-window__active';
 var moreInfoActive = 'more-info__active';
 
-var QueBlock = function() {     
-  this.checkDataSkip = this.checkDataSkip.bind(this);  
+var QueBlock = function() {       
   this.checkNextque = this.checkNextque.bind(this);  
   this.start = this.start.bind(this);
 };
@@ -26,7 +26,7 @@ QueBlock.prototype.start = function(evt) {
   this.firstQue();
   this.addListener();  
 };
-
+// Переменные
 QueBlock.prototype.variables = function() {
   this.checkedInput;
   this.currentQueNumber = 0;
@@ -42,6 +42,7 @@ QueBlock.prototype.firstQue = function() {
   startWindow.classList.remove(startWindowActive);
   queFirstBlock.classList.add(queBlockActive);
   buttonNextQue.classList.add('que-block__btn-next--active');  
+  sideBar.style.display = 'block';
   this.getActiveQue();
   this.removeDisabled();
   this.getCurrentAnswers();
@@ -89,6 +90,7 @@ QueBlock.prototype.getNextQue = function() {
 // Show block more-info
 QueBlock.prototype.showMoreInfo = function(evt) {
   evt.preventDefault();  
+  
   if (evt.target.classList.contains('que-block__more-info-btn')) {       
     this.currentMoreInfoBlock = this.activeQue.querySelector('.more-info');    
     this.currentMoreInfoBlock.classList.add(moreInfoActive);   
@@ -107,62 +109,28 @@ QueBlock.prototype.hideMoreInfoEsc = function(evt) {
 // get buttons for more-info
 QueBlock.prototype.getMoreInfoBtns = function() {
   this.getActiveQue();
+  
   this.openMoreInfo = this.activeQue.querySelector('.que-block__more-info-btn'); 
   this.closeMoreInfo = this.activeQue.querySelector('.more-info__close');
 };
 // Get discont value
-QueBlock.prototype.getDiscont = function() {
-  this.discont = this.discont + 4;
+QueBlock.prototype.getDiscont = function() {  
+  this.discountValue = parseInt(this.activeQue.getAttribute('data-discount'));
+  this.discont = this.discont + this.discountValue;
   sideBarDiscont.innerHTML = this.discont;
   lastPageDiscont.innerHTML = this.discont;
 };
-// Get data skip
-QueBlock.prototype.getDataSkip = function() {  
-  this.getCurrentAnswers();
-  var allInputs = this;
-  allInputs.inputs = [];
-  if (this.checkedInput.getAttribute('data-skip').length > 2) {
-    Array.prototype.forEach.call(this.checkedInputAll, function(item,i) {
-      allInputs.inputs[i] = item.getAttribute('data-skip').split(',');
-    });
-    this.dataSkipItem = allInputs.inputs;
-   
-    if (this.dataSkip.length == 0) {      
-      this.dataSkip = Array.prototype.map.call(this.dataSkipItem, function(item) {        
-        return 'que-block__item--' + item;
-      });
-    } else {    
-      this.dataSkipElements = Array.prototype.map.call(this.dataSkipItem, function(item) {        
-        return 'que-block__item--' + item;
-      });
-      Array.prototype.push.apply(this.dataSkip, this.dataSkipElements);
-    }    
-  } 
-};
-// Check skip
-QueBlock.prototype.checkDataSkip = function(_item) {
-  this.getDataSkip();
-  for (var i = 0; i < this.dataSkip.length; i++) {
-    if (_item.classList.contains(this.dataSkip[i])) {      
-      this.skipNextPage = true;
-      break;
-    } else {
-      this.skipNextPage = false;
-    }     
-  }    
-};
+
 // check next question
 QueBlock.prototype.checkNextque = function(evt) {  
   evt.preventDefault();   
   this.getActiveQue();
   
-  this.getCurrentAnswers();  
-  
-  this.getNextQue();
-  
-  this.checkDataSkip(this.nextQue);
-  
-  if (!this.skipNextPage) {
+  this.getCurrentAnswers();
+   
+  if (this.checkedInput) {
+    this.getDiscont();
+    this.getNextQue();
     this.removeActive(queBlockItemAll, queBlockActive);    
     
     this.nextQue.classList.add(queBlockActive);
@@ -172,33 +140,23 @@ QueBlock.prototype.checkNextque = function(evt) {
       this.openMoreInfo.addEventListener('click', this.showMoreInfo.bind(this));
       this.closeMoreInfo.addEventListener('click', this.hideMoreInfo.bind(this));
       window.addEventListener('keydown', this.hideMoreInfoEsc.bind(this));
-    }     
-  } else {
-    this.defaultNextName = this.nextQue.getAttribute('data-next-default');
-    this.defaultNext = document.querySelector('.' + this.defaultNextName);
-    
-    this.checkDataSkip(this.defaultNext);
-    
-    if (this.skipNextPage) {
-      this.nextName = this.defaultNext.getAttribute('data-next-default');
-      this.next = document.querySelector('.' + this.nextName);
-      this.removeActive(queBlockItemAll, queBlockActive);      
-      this.next.classList.add(queBlockActive);
-    } else {     
-      this.removeActive(queBlockItemAll, queBlockActive);
-      this.defaultNext.classList.add(queBlockActive);
-    }    
-  }  
-  if (queBlockLast.classList.contains(queBlockActive)) {
+    }
+    if (queBlockLast.classList.contains(queBlockActive)) {
       buttonNextQue.classList.remove('que-block__btn-next--active');
-  } else {
-    this.getActiveQue();
-    this.removeDisabled();
-    this.getPageNumber();
-    this.activeQue.classList.add('que-block__item--selected');
+    } else {
+      this.getActiveQue();
+      this.removeDisabled();
+      this.getPageNumber();
+      this.activeQue.classList.add('que-block__item--selected');
+    }
   }
-  this.getDiscont();
 };
-
+// Пролистывание страниц с отсутствием выбраных чекбоксов
+//else if (!this.checkedInput) {
+//    this.defaultNextName = this.nextQue.getAttribute('data-next-default');
+//    this.defaultNext = document.querySelector('.' + this.defaultNextName);
+//    this.removeActive(queBlockItemAll, queBlockActive);
+//    this.defaultNext.classList.add(queBlockActive);
+//  }
 
 export default new QueBlock();

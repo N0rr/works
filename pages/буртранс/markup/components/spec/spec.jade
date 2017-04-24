@@ -1,0 +1,15 @@
+mixin spec(data)
+    .spec
+      .spec__wrap
+        h1.spec__ttl Специальные уловия сотрудничества<br> с организациями
+        ul.spec__items(id='spec__slider')
+          each item in spec
+            li.spec__item
+              div.spec__img-block
+                img.spec__img(src="%=static=%img/content/spec-#{item.img}.jpg", width="198", height="117", alt="")
+              p.spec__txt!= item.txt
+              a.spec__link(href='#{item.link}') Подробнее
+        .spec__dots.indicators-hide
+          each dot in spec
+            .spec__dot
+        

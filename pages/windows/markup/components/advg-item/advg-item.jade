@@ -1,0 +1,10 @@
+mixin advg-item(data)
+    li.advg-item
+      each item in data.data
+        div.advg-item__element
+          div.advg-item__img-block
+            img.advg-item__img(src="%=static=%img/content/img-#{item.img}.png", width='100', height='100', alt="")
+          div.advg-item__info
+            span.advg-item__ttl= item.ttl
+            p.advg-item__txt= item.txt
+      

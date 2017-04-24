@@ -1,7 +1,10 @@
 include /more-info/more-info
 include /que-input/que-input
 mixin que(data, index)    
-    li.que.que-block__item(class='que-block__item--#{data.queClass}', data-next-default='que-block__item--#{data.dataNextDefault}')
+    li.que.que-block__item(
+      class='que-block__item--#{data.queClass}', 
+      data-next-default='que-block__item--#{data.dataNextDefault}'
+      data-discount='#{data.dataDiscount}')
       span.que-block__current-que 
       | Вопрос <span class='que-block__current-nbr'></span> из 7   
       div.que-block__que-wrap

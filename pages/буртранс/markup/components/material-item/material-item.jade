@@ -1,0 +1,10 @@
+mixin material-item(data, cls)
+    li.material-item(class='materials-item-#{cls}')             
+      div.materials__img-block
+        img.materials__img(src="%=static=%img/content/#{data.img}.jpg", width="270", height="160", alt="")
+      div.materials__info
+        span.materials__info-ttl= data.ttl 
+        ul.materials__info-items
+          each item in data.items
+            li.materials__info-item= item
+      a.materials__link(href='#') Узнать цену с доставкой

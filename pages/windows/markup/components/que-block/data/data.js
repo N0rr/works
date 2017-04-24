@@ -5,24 +5,23 @@ var data = {
       question: 'Где планируете ставить окно?',    
       type: 'radio',      
       dataNextDefault: 'que2',
+      dataDiscount: 2,
       data: [
         {    
           answer: 'Окна в квартир',
           dataclass: 'input-1',
-          dataNext:'que2', 
-          dataSkip:[], 
-          checked: 'true'
+          dataNext:'que2',           
+          checked: 'true'          
         },
         {
           answer: 'Окна в доме',
           dataclass: 'input-2',
-          dataNext:'que3', 
-          dataSkip:'que2'        
+          dataNext:'que3'          
         },
         {
           answer: 'Требуется обслуживание окон',
           dataclass: 'input-3',
-          dataNext:'que2', 
+          dataNext:'que2',          
           dataSkip:[
             'que3',
             'que4'
@@ -31,17 +30,12 @@ var data = {
         {
           answer: 'Окна в нежилые помещения и для юр.лиц',
           dataclass: 'input-4',
-          dataNext:'que2', 
-          dataSkip:[
-            'que3',
-            'que7'
-          ]         
+          dataNext:'que2'          
         },
         {
           answer: 'Остекление балкона',
           dataclass: 'input-5',
-          dataNext:'que2', 
-          dataSkip:'que3'
+          dataNext:'que2'          
         }
       ]
     },
@@ -50,37 +44,33 @@ var data = {
       question: 'Выберите вашу планировку',
       type: 'radio',         
       dataNextDefault: 'que3',
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Ташкентская',
           dataclass: 'input-1',
           dataNext:'que3', 
-          dataSkip:'que3',
-          checked: 'true'
+          checked: 'true'          
         },
         {        
           answer: 'Сталинская',
           dataclass: 'input-2',
-          dataNext:'que3', 
-          dataSkip:''        
+          dataNext:'que3'          
         },
         {
           answer: 'Кирпичный дом',
           dataclass: 'input-3',
-          dataNext:'que3', 
-          dataSkip:''
+          dataNext:'que3'          
         },
         {
           answer: 'Панельный дом',
           dataclass: 'input-4',
-          dataNext:'que3', 
-          dataSkip:''
+          dataNext:'que3'         
         },
         {
           answer: 'другое',
           dataclass: 'input-5',
-          dataNext:'que3', 
-          dataSkip:'que3'
+          dataNext:'que3'         
         }
       ]
     },
@@ -89,37 +79,33 @@ var data = {
       question: 'Где планируется поменять окна?',
       type: 'checkbox',      
       dataNextDefault: 'que4',
+      dataDiscount: 3,
       data: [          
         {    
           answer: 'Зал',
           dataclass: 'input-1',
-          dataNext:'que4', 
-          dataSkip:'', 
-          checked: 'true'
+          dataNext:'que4',           
+          checked: 'true'          
         },
         {        
           answer: 'Кухня',
           dataclass: 'input-2',
-          dataNext:'que4', 
-          dataSkip:''        
+          dataNext:'que4'          
         },
         {
           answer: 'Балконный блок',
           dataclass: 'input-3',
-          dataNext:'que5', 
-          dataSkip:''
+          dataNext:'que5'          
         },
         {
           answer: 'Комната',
           dataclass: 'input-4',
-          dataNext:'que4', 
-          dataSkip:''
+          dataNext:'que4'          
         },
         {
           answer: 'Другое',
           dataclass: 'input-5',
-          dataNext:'que4', 
-          dataSkip:''
+          dataNext:'que4'          
         }
       ]
     },
@@ -128,25 +114,23 @@ var data = {
       question: 'Нужен ли цветной профиль или ламинация?',
       type: 'radio',            
       dataNextDefault: 'que5',
+      dataDiscount: 7,
       data: [          
         {    
           answer: 'Да, цветной профиль',
           dataclass: 'input-1',
-          dataNext:'que5', 
-          dataSkip:'que5',    
-          checked: 'true'
+          dataNext:'que5',              
+          checked: 'true'          
         },
         {        
           answer: 'Да, ламинация',
           dataclass: 'input-2',
-          dataNext:'que5', 
-          dataSkip:''        
+          dataNext:'que5'          
         },
         {
           answer: 'Нет, нужен белый профиль',
           dataclass: 'input-3',
-          dataNext:'que5', 
-          dataSkip:''
+          dataNext:'que5'          
         }        
       ],
       moreInfo: {          
@@ -166,28 +150,26 @@ var data = {
       queClass: 'que5', 
       question: 'Выберите тип стеклопакетов:',
       type: 'radio',      
-      dataNextDefault: 'que6',       
+      dataNextDefault: 'que6',
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Обычный',
           dataclass: 'input-1',
-          dataNext:'que6', 
-          dataSkip:'',    
+          dataNext:'que6',           
           checked: 'true'          
         },
         {        
           answer: 'Энергосберегающий',
           dataclass: 'input-2',
-          dataNext:'que6', 
-          dataSkip:'',
-          answerTxt: 'на 30% лучше удерживает тепло'
+          dataNext:'que6',           
+          answerTxt: 'на 30% лучше удерживает тепло'          
         },
         {
           answer: 'Мультифункциональный',
           dataclass: 'input-3',
-          dataNext:'que6', 
-          dataSkip: '',
-          answerTxt:'на 30% лучше удерживает тепло и припятствует проникновению ИК-лучей тепло зимой, прохладно летом без кондиционера'
+          dataNext:'que6',           
+          answerTxt:'на 30% лучше удерживает тепло и припятствует проникновению ИК-лучей тепло зимой, прохладно летом без кондиционера'          
         }        
       ],
       moreInfo: {          
@@ -207,26 +189,24 @@ var data = {
       queClass: 'que6', 
       question: 'Сколько камер планируете в стеклопакете?',
       type: 'checkbox',      
-      dataNextDefault: 'que7',           
+      dataNextDefault: 'que7',
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Однокамерные',
           dataclass: 'input-1',
-          dataNext:'que7', 
-          dataSkip:'',    
-          checked: 'true'          
+          dataNext:'que7',           
+          checked: 'true'
         },
         {        
           answer: 'Двухкамерные',
           dataclass: 'input-2',
-          dataNext:'que7', 
-          dataSkip:''          
+          dataNext:'que7'         
         },
         {
           answer: 'Трехкамерные',
           dataclass: 'input-3',
-          dataNext:'que7', 
-          dataSkip: ''         
+          dataNext:'que7'          
         }        
       ],
       moreInfo: {          
@@ -246,20 +226,19 @@ var data = {
       queClass: 'que7',
       question: 'Необходима ли защита от детей?',
       type: 'radio',      
-      dataNextDefault: 'que-last',            
+      dataNextDefault: 'que-last',  
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Да',
           dataclass: 'input-1',
           dataNext:'que-last', 
-          dataSkip:'',    
           checked: 'true'          
         },
         {        
           answer: 'Нет',
           dataclass: 'input-2',
-          dataNext:'que-last', 
-          dataSkip:''          
+          dataNext:'que-last'         
         }            
       ],
       moreInfo: {          
@@ -280,19 +259,18 @@ var data = {
       type: 'radio',      
       queClass: 'que8',
       dataNextDefault: 'que4',
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Да',
           dataclass: 'input-1',
-          dataNext:'que4', 
-          dataSkip:'',    
-          checked: 'true'          
+          dataNext:'que4',              
+          checked: 'true'         
         },
         {        
           answer: 'Нет',
           dataclass: 'input-2',
-          dataNext:'que4', 
-          dataSkip:''          
+          dataNext:'que4'          
         }            
       ],
       moreInfo: {          
@@ -313,37 +291,33 @@ var data = {
       type: 'radio',    
       queClass: 'que9',
       dataNextDefault: 'que4',
+      dataDiscount: 4,
       data: [          
         {    
           answer: 'Ташкентская',
           dataclass: 'input-1',
-          dataNext:'que3', 
-          dataSkip:'',
-          checked: 'true'
+          dataNext:'que3',           
+          checked: 'true'          
         },
         {        
           answer: 'Сталинская',
           dataclass: 'input-2',
-          dataNext:'que3', 
-          dataSkip:''        
+          dataNext:'que3'          
         },
         {
           answer: 'Кирпичный дом',
           dataclass: 'input-3',
-          dataNext:'que3',
-          dataSkip:''
+          dataNext:'que3'          
         },
         {
           answer: 'Панельный дом',
           dataclass: 'input-4',
-          dataNext:'que3', 
-          dataSkip:''
+          dataNext:'que3'          
         },
         {
           answer: 'другое',
           dataclass: 'input-5',
-          dataNext:'que3', 
-          dataSkip:'que3'
+          dataNext:'que3'          
         }
       ]
     }

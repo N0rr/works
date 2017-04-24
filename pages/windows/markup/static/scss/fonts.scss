@@ -4,13 +4,17 @@
 @include font-face('SlabLight', '../fonts/PFAgoraSlabPro-Light', normal, italic, $exts: woff woff2 ttf);
 @include font-face('SlabBold', '../fonts/PFAgoraSlabPro-Bold', normal, italic, $exts: woff woff2 ttf);
 
+@include font-face('mmhead', '../fonts/mmheadlineprowebtt-regular-webfont', normal, italic, $exts: woff woff2 ttf);
+
+
 
 $font-1-m: SlabMedium, Helvetica, Arial, sans-serif;
 $font-1: SlabRegular, Helvetica, Arial, sans-serif;
 $font-1-l: SlabLight , Helvetica, Arial, sans-serif;
 $font-1-b: SlabBold , Helvetica, Arial, sans-serif;
+$font-2: 'mmhead', fantasy, Arial, sans-serif;
 
-$h1-m: 30px;
+$h1-m: 26px;
 $h2-m: 18px;
 $h3-m: 20px;
 $h4-m: 18px;

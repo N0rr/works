@@ -2,6 +2,7 @@
   @include nl;
   color: $color-2;
   margin-right: 50px;
+  display: none;
 }
 
 .side-bar__item {
@@ -29,6 +30,7 @@
   font-size: 14px;
   margin-bottom: 0px;
   margin-top: 15px;
+  width: 170px;
 }
 
 .side-bar__input {
@@ -38,5 +40,12 @@
 
 .side-bar__submit {
   @include btn;
+  width: 158px;
+  border: none;
+  font-size: 13px;
+  box-shadow: none;
   margin-top: 20px;
+  &:hover {
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0, 0.5);    
+  }
 }

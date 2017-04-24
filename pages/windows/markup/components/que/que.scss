@@ -42,10 +42,6 @@
   animation: showque 0.8s;
 }
 
-.quer-block__item--selected {
-  
-}
-
 .que-block__input-item {
   margin-bottom: 20px;
 }
@@ -92,11 +88,19 @@
 
 .que-block__btn-next {
   @include btn;
+  box-shadow: none;
   font-size: 18px;
   width: 330px;
   margin-left: 0;
   margin-top: 45px;
   display: none;
+  &:hover {
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0, 0.5);
+    transition: 0.2s ease;
+  }
+  &:active {
+    opacity: 0.7; 
+  }
 }
 
 .que-block__btn-next--active {

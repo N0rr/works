@@ -1,0 +1,24 @@
+.footer-app__wrap {
+  max-width: 960px;
+  @include flex-row;
+  justify-content: space-between;
+  margin: auto;
+  color: #fff;
+}
+
+.footer-app__s-item {  
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.footer-app__privacy-policy-link {
+  text-decoration: none;
+}
+
+.footer-app__privacy-policy { 
+  display: inline-block;
+  border-bottom: 1px dashed #fff;
+  font-size: 18px;
+  line-height: 17px;  
+  color: #fff;  
+}

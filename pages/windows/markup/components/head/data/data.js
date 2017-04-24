@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'Окна уютны',
+        title: 'Окна Уютны',
         useSocialMetaTags: true
     }
 }

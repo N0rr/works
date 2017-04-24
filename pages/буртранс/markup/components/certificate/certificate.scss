@@ -1,0 +1,95 @@
+.fancybox-close {
+  @include bg($close-form);
+  top: -10px;
+  right: -10px;
+}
+
+.certificate__wrap {
+  padding: 20px;
+}
+
+.certificate__ttl {
+  @include ttl;
+}
+
+.certificate__items {
+  @include nl;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.certificate__item {
+  width: 174px;  
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0, 0.1);
+  margin-bottom: 10px;
+}
+
+.certificate__dots .owl-dot {
+  @include dot;
+}
+
+.certificate__dots {
+  @include dots;
+  margin-top: 30px;
+}
+
+.certificate__dot {
+  @include dot;
+}
+
+@media #{$tablet} {
+  .certificate__wrap {
+    max-width: $max-tablet;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .certificate__ttl {
+    font-size: $h1-d;
+  }
+  
+  .certificate__prev {
+    @include bg($arrow-prev);
+    cursor: pointer;
+  }
+  
+  .certificate__next {
+    @include bg($arrow-next);
+    cursor: pointer;
+  }
+  
+  .certificate__items-wrap {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 54px;
+  }
+  
+  .certificate__items {
+    width: 650px;    
+    margin: 0;
+  }
+}
+
+
+@media #{$desktop} {
+  .certificate__wrap {
+    max-width: $max-desktop;
+  }
+  
+  .certificate__ttl {
+    width: 780px;
+  }
+  
+  .certificate__items-wrap {
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .certificate__items {
+    width: 1030px;
+  }
+}

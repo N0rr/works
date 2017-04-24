@@ -1,0 +1,34 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header-app/header-app
+    include ../components/main/main
+    include ../components/side-bar/side-bar
+    include ../components/start-window/start-window   
+    include ../components/que-block/que-block
+    include ../components/footer-app/footer-app
+
+    head
+        +head(head.defaults)
+    body.page-app
+        |%=symbols=%
+
+        section.page-app__wrapper
+
+            //- Include your components here
+            +header-app()
+            +main()
+            .page__buffer
+
+        .page__footer
+            +footer-app()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')        
+        script(src='%=static=%js/separate-js/jquery-2.1.4.min.js')        
+        script(src='%=static=%js/separate-js/owl.carousel.min.js')
+        script(src='%=static=%js/separate-js/slider-app.js')   

@@ -1,0 +1,119 @@
+.work-with__wrap {
+  padding: 20px;
+}
+
+.work-with__ttl {
+  @include ttl;
+  margin-top: 30px;
+}
+
+.work-with__items {
+  @include nl;  
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.work-with__item {
+  @include flex;  
+  justify-content: center;
+  align-items: center;
+  min-height: 79px;    
+  margin: auto;
+}
+
+.work-with__img {  
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.work-with__dots {
+  @include dots;
+  margin-top: 30px;
+}
+
+.work-with__dot {
+  @include dot;
+}
+
+.owl-carousel .owl-item img {
+  width: auto;  
+}
+
+
+@media #{$tablet} {
+  .work-with__wrap {
+    max-width: $max-tablet;    
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .work-with__ttl {
+    font-size: 20px;
+  }
+  
+  .work-with__items {
+    flex-direction: row;
+  }
+  
+  .work-with__item {
+    min-height: 0;
+  }
+}
+
+
+@media #{$desktop} {
+  .work-with {    
+    @include flex-row;
+    align-items: center;    
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0, 0.2);
+    justify-content: center;
+    background: #f6f6f6;  
+  }
+  
+  .work-with__wrap {
+    max-width: 1000px;
+    @include flex-row;
+    align-items: center;    
+    padding: 0;
+    margin: 0;    
+  }
+  
+  .work-with__ttl-wrap {
+    @include flex;
+    width: auto;
+    background: #f6f6f6;      
+  }
+
+  
+  .work-with__ttl {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;    
+    text-align: left;
+    padding-right: 55px;
+    padding-left: 10px;  
+    min-height: 199px;    
+    margin-left: auto;
+    margin-top: 0;
+  }
+  
+  .work-with__items {   
+    margin: 0;
+    background: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 970px;
+    padding-left: 40px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .work-with__item {
+    margin: 0;
+  }
+}

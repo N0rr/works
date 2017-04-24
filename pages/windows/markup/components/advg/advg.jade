@@ -1,0 +1,24 @@
+include /advg-item/advg-item
+mixin advg(data)
+    .advg
+      div.advg__wrap
+        h1.advg__ttl Наши преимущества
+        ul.advg__items-nbr
+          li.advg__item-nbr
+            span.advg__item-value 30
+            span.advg__item-txt лет гарантии
+          li.advg__item-nbr
+            span.advg__item-value 21
+            span.advg__item-txt год на рынке
+          li.advg__item-nbr
+            span.advg__item-value 0%
+            span.advg__item-txt рассрочка на 6 мес.
+        ul.advg__items(id='advg__slider')
+          each item in advgItem
+            +advg-item(item)
+        div.advg__indicators.indicators-hide
+          each item in advgItem
+            div.advg__indicator
+            
+        
+        

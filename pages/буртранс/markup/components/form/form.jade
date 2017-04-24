@@ -1,0 +1,14 @@
+mixin form(data)
+    .form
+      .form__wrap
+        h1.form__ttl
+          span.form__ttl-1 Прямые поставки строительных материалов
+          span.form__ttl-2 с доставкой по Самаре и области
+        span.form__ttl-txt Щебень, Песок, Камень, Керамзит, Чернозем
+        form.form__form(id="", name="", action="", method="")
+          p.form__form-ttl Получите индивидуальное предложение по стоимости и срокам поставки
+          div.form__items
+            input.form__input.form__name(type='text', placeholder='Введите Имя')
+            input.form__input.form__phone(type='text', placeholder='Введите Телефон')
+            input.form__submit(type='submit', value='Получить')
+          

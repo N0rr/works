@@ -6,8 +6,7 @@ html, body {
 }
 
 .page {  
-  background: rgba(0, 0, 0, 0.95) url(%=static=%/content/bg.jpg)no-repeat;  
-  background-size: cover;  
+  
 }
 
 .page__footer {
@@ -15,7 +14,19 @@ html, body {
   margin: auto;  
 }
 
+.page-app {  
+  background: rgba(0, 0, 0, 0.95) url(%=static=%/content/bg.jpg)no-repeat;  
+  background-size: cover;  
+}
+
 .page__wrapper {
+    min-height: 100%;    
+    min-width: 320px;  
+    margin-bottom: -50px;
+    width: 100%;      
+}
+
+.page-app__wrapper {
     @include flex;
     margin: 0 auto;
     min-height: 100%;    

@@ -1,0 +1,43 @@
+mixin header(data, url)
+    header.header
+      div.header__top
+        .header__wrap.header__top-wrap
+          a.header__logo(href="#")
+            img.header__logo-img(src="%=static=%img/content/logo.png", width="", height="", alt="")
+          p.header__info Продажа песка и щебня<br> с доставкой по Самаре и области
+          div.header__menu-btn
+            span.header__menu-btn-line    
+            span.header__menu-btn-line2
+            span.header__menu-btn-line3          
+          div.header__phones
+            a.header__nbr(href="tel:+88462055060") 8 (846) 205-50-60
+            a.header__nbr(href="tel:+89879555060") 8 (987) 955-50-60
+          a.header__open-form(href="#") Заказать звонок
+      div.header__bot
+        .header__wrap
+          ul.header__menu
+            each item in header
+              li.header__menu-item
+                -if (item.link == url)
+                  a.header__menu-link(href="#{item.link}", class='header__menu-link--active')= item.txt
+                -else 
+                  a.header__menu-link(href="#{item.link}")= item.txt
+                
+            div.header__phones.header__phones-mobile
+              a.header__nbr(href="tel:+88462055060") 8 (846) 205-50-60
+              a.header__nbr(href="tel:+89879555060") 8 (987) 955-50-60
+              a.header__open-form.header__open-form-mobile(href="#") Заказать звонок
+              
+      .form-cb__form.header__form         
+        .form-cb__form-wrap.header__form-wrap
+          .form-cb__close-btn.header__close-btn
+          div.form-cb__wrap
+            h5.form-cb__ttl ОСТАВЬТЕ ЗАЯВКУ
+            span.form-cb__txt Мы свяжемся с Вами в ближайшее время
+            form.form-cb__real-form.header__real-form(action="/")
+              input.form-cb__input.form-cb__name.header__f-name(type="text", require, placeholder='Имя')
+              input.form-cb__input.form-cb__phone.header__f-phone(type="text", require, placeholder='+ _ - ___ - ___ - ____')
+              input.form-cb__submit.header__f-submit(type="submit", value='Отправить')
+            span.form-cb__info Ваша информация конфиденциaльна <br> и не передается 3-им лицам
+              
+              

@@ -1,0 +1,20 @@
+mixin windows-disc(data)
+    .windows-disc
+      .windows-disc__wrap
+        ul.windows-disc__items(id='windows-disc__slider')
+          each item in windows
+            li.windows-disc__item(class='windows-disc__item--#{item.img}')
+              .windows-disc__img-block
+                img.windows-disc__img(src="%=static=%img/content/img-#{item.img}.png", alt="")
+              p.windows-disc__name= item.txt
+              span.windows-disc__price <span class='windows-disc__txt'>от</span> #{item.price} <span class='windows-disc__txt'>руб.</span>
+              span.windows-disc__old-price= item.oldPrice          
+          li.windows-disc__item.windows-disc__item-mob
+              a.btn-discount(href="#") Рассчитать стоимость <br> с учётом скидки онлайн
+        div.windows-disc__indicators.indicators-hide
+          each item in windows
+            div.windows-disc__indicator
+        a.btn-discount.windows-disc__btn(href="#") Рассчитать стоимость <br> с учётом скидки онлайн
+        
+         
+        

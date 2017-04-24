@@ -1,23 +1,32 @@
-.header {
-  @include flex-row;
-  padding-top: 10px;
-  justify-content: space-between;
+.header__wrap {
+  @include flex;  
   align-items: center;
+  padding-top: 10px;
+  color: $color-2;
+  margin: auto;
 }
 
 .header__logo {
   text-decoration: none;
+  color: $color-2;
 }
 
 .header__logo-txt {
   display: block;  
 }
 
-.header__info {  
-  font-family: $font-1-b;
-  color: #fff;
-  font-size: 16px;
+.header__info { 
+  font-family: $font-1-b;  
+  font-size: 14px;
   text-align: center;
+}
+
+.header__info-txt {
+  width: 280px;
+}
+
+.header__mobile {
+  display: none;
 }
 
 .header__contact {
@@ -28,6 +37,8 @@
 .header__number {
   display: block;
   font-size: 27.30px;  
+  color: $color-2;
+  margin-top: 10px;
 }
 
 .header__nbr-code {
@@ -36,6 +47,56 @@
 
 .header__cont-txt {
   display: inline-block;
-  border-bottom: 1px dashed #fff;
+  border-bottom: 1px dashed $color-2;
   line-height: 15px;
+  color: $color-2;
+}
+
+@media #{$tablet} {
+  .header__wrap {
+    max-width: $max-tablet;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .header__info-txt {
+    width: 300px;
+  }
+  
+  .header__number {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header__cont-txt {
+    font-size: 14px;
+  }
+}
+
+
+@media #{$desktop} {
+  .header__wrap {
+    max-width: $max-desktop;
+  }
+  
+  .header__info {
+    font-size: 16.5px;
+  }
+  
+  .header__info-txt {
+    width: auto;
+  }
+  
+  .header__mobile {
+    display: block;
+  }
+  
+  .header__number {
+    font-size: 27px;
+  }
+  
+  .header__cont-txt {
+    font-size: 16.2px;
+  }
+  
 }

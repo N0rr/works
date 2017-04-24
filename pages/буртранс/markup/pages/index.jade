@@ -1,0 +1,47 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/form/form
+    include ../components/work-with/work-with
+    include ../components/materials/materials
+    include ../components/spec/spec    
+    include ../components/advg/advg   
+    include ../components/contacts/contacts    
+    include ../components/certificate/certificate     
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+        section.page__wrapper
+
+            //- Include your components here
+            +header(data, 'stone')
+            +form()
+            +work-with()
+            +materials()
+            +spec()
+            +advg()
+            +certificate()  
+            +contacts()                      
+            .page__buffer
+
+        .page__footer
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/jquery-2.1.4.min.js')
+        script(src='%=static=%js/separate-js/owl.carousel.min.js')
+        script(src="%=static=%js/separate-js/jquery.fancybox.pack.js")
+        script(src="%=static=%js/separate-js/jquery.fancybox-buttons.js")
+        script(src="%=static=%js/separate-js/jquery.fancybox-media.js")
+        script(src="%=static=%js/separate-js/jquery.fancybox-thumbs.js")            
+        script(src='%=static=%js/separate-js/common.js')

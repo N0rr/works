@@ -1,0 +1,105 @@
+.metering-form {
+  background: #006a9f;
+}
+
+.metering-form__wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+.metering-form__form-block {
+  background: #fff;
+  width: 280px;
+  margin: auto;
+  border-radius: 8px;
+  padding-bottom: 35px;
+}
+
+.metering-form__ttl {
+  display: block;
+  font-size: 22px;
+  font-family: $font-1-b;
+  font-weight: bold;
+  padding-top: 35px;
+  color: $color-2;
+  text-align: center;
+}
+
+.metering-form__txt {
+  font-size: 18px;
+  color: #0070a5;
+  text-align: center;
+  font-family: $font-1-b;
+  font-weight: bold;
+}
+
+.metering-form__input {
+  display: block;
+  border: 2px solid #c1c1c1;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  color: #c1c1c1;
+  margin: auto;
+  width: 170px;
+  margin-bottom: 10px;
+  padding-right: 35px;
+  outline: none;
+}
+
+.metering-form__name {
+  background: url(%=static=%/content/icon-login.jpg)no-repeat 95% 50%;
+}
+
+.metering-form__phone {
+  background: url(%=static=%/content/icon-phone.jpg)no-repeat 94% 50%;
+}
+
+.metering-form__submit {
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, $color-1, #004271);
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  text-align: center;
+  width: 220px;
+  margin: auto;
+  border: none;
+  margin-top: 20px;
+  &:hover {    
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 10px 6px rgba(0,0,0, 0.4);
+  }
+}
+
+
+@media #{$tablet} {
+  .metering-form {
+    background: #0070a5 url(%=static=%/content/dude.jpg)no-repeat 60% 50%; 
+  }
+  .metering-form__wrap {
+    max-width: $max-tablet;
+    padding: 30px;
+    padding-top: 45px;
+    padding-bottom: 60px;    
+  }
+  
+  .metering-form__form-block {
+    margin: 0;
+  }
+}
+
+
+@media #{$desktop} {
+  .metering-form__wrap {
+    max-width: $max-desktop;
+    background-position: bottom right;
+  } 
+  
+}
+

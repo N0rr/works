@@ -1,0 +1,263 @@
+.windows-disc {
+  background: $color-1;
+}
+
+.windows-disc__wrap {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.windows-disc__items {
+  @include nl;
+  @include flex;
+}
+
+.windows-disc__item {
+  @include flex;
+  align-items: center;
+  order: 5;
+}
+
+.windows-disc__img-block {
+  min-height: 350px;
+  margin-bottom: -100px;
+}
+
+.windows-disc__name {
+  font-family: $font-2;
+  font-size: 29px;
+  color: #fff;
+  margin: 0;
+  text-shadow: 
+		-0   -2px 0   #4E4E4E,
+		 0   -2px 0   #4E4E4E,
+		-0    2px 0   #4E4E4E,
+		 0    2px 0   #4E4E4E,
+		-2px -0   0   #4E4E4E,
+		 2px -0   0   #4E4E4E,
+		-2px  0   0   #4E4E4E,
+		 2px  0   0   #4E4E4E,
+		-1px -2px 0   #4E4E4E,
+		 1px -2px 0   #4E4E4E,
+		-1px  2px 0   #4E4E4E,
+		 1px  2px 0   #4E4E4E,
+		-2px -1px 0   #4E4E4E,
+		 2px -1px 0   #4E4E4E,
+		-2px  1px 0   #4E4E4E,
+		 2px  1px 0   #4E4E4E,
+		-2px -2px 0   #4E4E4E,
+		 2px -2px 0   #4E4E4E,
+		-2px  2px 0   #4E4E4E,
+		 2px  2px 0   #4E4E4E,
+		-2px -2px 0   #4E4E4E,
+		 2px -2px 0   #4E4E4E,
+		-2px  2px 0   #4E4E4E,
+		 2px  2px 0   #4E4E4E;
+}
+
+.windows-disc__price {
+  font-family: $font-2;
+  font-size: 58px;
+  color: #fff;
+  text-shadow: 
+		-0   -2px 0   #4E4E4E,
+		 0   -2px 0   #4E4E4E,
+		-0    2px 0   #4E4E4E,
+		 0    2px 0   #4E4E4E,
+		-2px -0   0   #4E4E4E,
+		 2px -0   0   #4E4E4E,
+		-2px  0   0   #4E4E4E,
+		 2px  0   0   #4E4E4E,
+		-1px -2px 0   #4E4E4E,
+		 1px -2px 0   #4E4E4E,
+		-1px  2px 0   #4E4E4E,
+		 1px  2px 0   #4E4E4E,
+		-2px -1px 0   #4E4E4E,
+		 2px -1px 0   #4E4E4E,
+		-2px  1px 0   #4E4E4E,
+		 2px  1px 0   #4E4E4E,
+		-2px -2px 0   #4E4E4E,
+		 2px -2px 0   #4E4E4E,
+		-2px  2px 0   #4E4E4E,
+		 2px  2px 0   #4E4E4E,
+		-2px -2px 0   #4E4E4E,
+		 2px -2px 0   #4E4E4E,
+		-2px  2px 0   #4E4E4E,
+		 2px  2px 0   #4E4E4E;
+}
+
+.windows-disc__txt {
+  font-size: 28px;
+}
+
+.windows-disc__old-price {
+  font-family: $font-2;
+  display: block;
+  font-size: 33px;
+  position: relative;
+  width: 35%;
+  text-align: center;
+  margin-top: -10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  &:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: url(%=static=%/content/line-through.png)no-repeat 50%;
+    position: absolute;
+    top: 2px;
+  }
+}
+
+.windows-disc__indicators {  
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.windows-disc__indicator {
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  background: $color-3;
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+.windows-disc__indicators .active {
+  background: #fff;
+}
+
+.windows-disc__item--appart {
+  order: 1;
+}
+
+.windows-disc__item--balcony-block {
+  order: 2;
+}
+
+.windows-disc__item--balcony {
+  order: 3;
+}
+
+.windows-disc__item-mob {  
+  order: 4;
+}
+
+
+@media #{$tablet} {
+  .windows-disc__wrap {
+    max-width: $max-tablet;
+    padding-top: 0;
+    margin: auto;
+  }
+  
+  .windows-disc__items {
+    overflow: hidden;
+  }
+  
+  .windows-disc__item {
+    margin-top: -30px;
+  }
+  
+  .windows-disc__img-block {
+    margin-bottom: -180px;
+    min-height: 505px;
+  }
+  
+  .windows-disc__name {
+    z-index: 10;
+    font-size: 36.72px;
+  }
+  
+  .windows-disc__txt {
+    font-size: 28.42px;
+  }
+  
+  .windows-disc__price {
+    font-size: 58.42px;
+    text-shadow: 
+		-0   -3px 0   #4E4E4E,
+		 0   -3px 0   #4E4E4E,
+		-0    3px 0   #4E4E4E,
+		 0    3px 0   #4E4E4E,
+		-3px -0   0   #4E4E4E,
+		 3px -0   0   #4E4E4E,
+		-3px  0   0   #4E4E4E,
+		 3px  0   0   #4E4E4E,
+		-1px -3px 0   #4E4E4E,
+		 1px -3px 0   #4E4E4E,
+		-1px  3px 0   #4E4E4E,
+		 1px  3px 0   #4E4E4E,
+		-3px -1px 0   #4E4E4E,
+		 3px -1px 0   #4E4E4E,
+		-3px  1px 0   #4E4E4E,
+		 3px  1px 0   #4E4E4E,
+		-2px -3px 0   #4E4E4E,
+		 2px -3px 0   #4E4E4E,
+		-2px  3px 0   #4E4E4E,
+		 2px  3px 0   #4E4E4E,
+		-3px -2px 0   #4E4E4E,
+		 3px -2px 0   #4E4E4E,
+		-3px  2px 0   #4E4E4E,
+		 3px  2px 0   #4E4E4E,
+		-3px -3px 0   #4E4E4E,
+		 3px -3px 0   #4E4E4E,
+		-3px  3px 0   #4E4E4E,
+		 3px  3px 0   #4E4E4E,
+		-3px -3px 0   #4E4E4E,
+		 3px -3px 0   #4E4E4E,
+		-3px  3px 0   #4E4E4E,
+		 3px  3px 0   #4E4E4E;
+  }
+  
+  .windows-disc__old-price {
+    font-size: 33.13px;
+  }
+  
+  .windows-disc__indicators {
+    margin-bottom: 30px;
+  }
+  
+  .windows-disc__btn {
+    width: 370px;
+    font-size: 21px;
+  }
+}
+
+
+@media #{$desktop} {  
+  .windows-disc {
+    overflow: hidden;
+  }
+  .windows-disc__wrap {
+    max-width: $max-desktop;
+    padding-bottom: 40px;
+  }
+  .windows-disc__items {    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    overflow: visible;
+  }
+  
+  .windows-disc__item {
+    width: 33%;    
+  }
+  
+  .windows-disc__item:nth-of-type(4),
+  .windows-disc__item:nth-of-type(5) {
+    width: 50%;
+  }
+  
+  .windows-disc__item-mob {
+    width: 100%;
+    margin-top: 35px;
+  }
+  
+  .windows-disc__btn {
+    margin-top: 20px;
+  }
+}

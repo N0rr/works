@@ -1,0 +1,38 @@
+.disc-mini {
+  display: none;
+}
+
+@media #{$tablet} {
+  .disc-mini {
+    display: block;
+    background: $color-1;
+  }
+  
+  .disc-mini__wrap {
+    margin: auto;
+    max-width: $max-tablet;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .disc-mini__ttl {
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .disc-mini__txt {
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  
+  .disc-mini__btn {
+    width: 370px;   
+    display: block;
+    font-size: 21px;    
+  }
+}

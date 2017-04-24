@@ -1,0 +1,34 @@
+include /material-item/material-item
+mixin materials(data)
+    .materials
+      .materials__wrap
+        h1.materials__ttl Мы предлагаем качественные<br> строительные материалы
+        div.materials__block
+          span.materials__name ЩЕБЕНЬ
+          ul.materials__items.materials__macadam(id='materials__macadam')
+            each item in macadam             
+              +material-item(item, 'macadam')
+          .materials__dots.materials__dots-macadam.indicators-hide
+            each dot in macadam
+              .materials__dot
+        
+        div.materials__block
+          span.materials__name ПЕСОК
+          ul.materials__items.materials__sand(id='materials__sand')
+            each item in sand             
+              +material-item(item, 'sand')
+          .materials__dots.materials__dots-sand.indicators-hide
+            each dot in sand
+              .materials__dot
+        
+        div.materials__block
+          span.materials__name КАМЕНЬ, КЕРАМЗИТ, ЧЕРНОЗЕМ
+          ul.materials__items.materials__stone(id='materials__stone')
+            each item in stone             
+              +material-item(item, 'stone')
+          .materials__dots.materials__dots-stone.indicators-hide
+            each dot in stone
+              .materials__dot
+              
+        
+              

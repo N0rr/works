@@ -1,0 +1,16 @@
+mixin certificate(data)
+    .certificate
+      .certificate__wrap
+        h1.certificate__ttl Поставляемая нами продукция имеет все необходимые сертификаты качества
+        div.certificate__items-wrap
+          .certificate__prev
+          ul.certificate__items(id='certificate__slider')
+            each item in cert
+              li.certificate__item
+                a(class="fancybox-button" rel="fancybox-button" href="%=static=%img/content/cert-#{item.img}.jpg")
+                  img.certificate__img(src="%=static=%img/content/cert-#{item.miniImg}-mini.jpg"  width="175" height="219" alt="img") 
+          .certificate__next
+        .certificate__dots.indicators-hide
+          each dot in cert
+            .certificate__dot
+        

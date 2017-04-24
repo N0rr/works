@@ -3,10 +3,13 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
-    include ../components/main/main
-    include ../components/side-bar/side-bar
-    include ../components/start-window/start-window   
-    include ../components/que-block/que-block
+    include ../components/discount/discount
+    include ../components/windows-disc/windows-disc
+    include ../components/advg/advg
+    include ../components/disc-mini/disc-mini
+    include ../components/option/option
+    include ../components/metering-form/metering-form
+    include ../components/contacts/contacts
     include ../components/footer/footer
 
     head
@@ -18,7 +21,13 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             +header()
-            +main()
+            +discount()
+            +windows-disc()
+            +advg()
+            +disc-mini()
+            +option()
+            +metering-form()
+            +contacts()
             .page__buffer
 
         .page__footer
@@ -31,4 +40,4 @@ html(class="no-js", lang="ru")
         script(src='%=static=%js/main%=hash=%%=min=%.js')        
         script(src='%=static=%js/separate-js/jquery-2.1.4.min.js')        
         script(src='%=static=%js/separate-js/owl.carousel.min.js')
-        script(src='%=static=%js/separate-js/common.js')     
+        script(src='%=static=%js/separate-js/common.js')    

@@ -1,10 +1,11 @@
 mixin header(data)
     header.header      
-      a.header__logo(href="#")
-        img.header__img(src="%=static=%img/content/logo.png", alt="Окна уютны")
-        span.header__info.header__logo-txt Ставим окна с 1996 года
-      div.header__info Производство и монтаж окон и оконных конструкций <br> в Самарской области <br> Готовность за 7 дней
-      a.header__contact(href="tel:+78001234567")
-        span.header__number 8 <span class='header__nbr-code'>(800)</span> 123-45-67
-        span.header__cont-txt Заказать бесплатный звонок          
+      div.header__wrap
+        a.header__logo(href="#")
+          img.header__img(src="%=static=%img/content/logo.png", alt="Окна уютны")
+          span.header__info.header__logo-txt Ставим окна с 1996 года
+        div.header__info.header__info-txt Производство и монтаж окон и оконных конструкций <br class='header__mobile'> в Самарской области <br class='header__mobile'> Готовность за 7 дней
+        a.header__contact(href="tel:+78001234567")
+          span.header__number 8 <span class='header__nbr-code'>(800)</span> 123-45-67
+          span.header__cont-txt Заказать бесплатный звонок         
           

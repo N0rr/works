@@ -9,7 +9,7 @@ var QueData = function() {
 QueData.prototype.start = function(evt) {
   evt.preventDefault();  
   this.getInputs();  
-  this.dataJson;  
+  this.dataJson;    
   submit.submit();    
 };
 

@@ -160,42 +160,43 @@
   }
   &:focus {
     border-color: $color-1;
-  }
-  
+  }  
 }
 
-@mixin title() {
-  @include center();  
-  font-family: $font-1;
-  font-size: $h2-desktop;
-  color: $color-1;
-  border-bottom: 10px double $color-9;
+@mixin ttl() {
+  font-size: 26px;
+  font-family: $font-1-b;
+  text-align: center;
+  border-bottom: 3px solid $color-1;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: auto;
 }
 
 @mixin btn() {
-  cursor: pointer;
-  display: block;
-  font-size: 13px;  
-  margin: auto;  
-  color: #fff;
-  font-family: $font-1-b;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, $color-1, #004271);
   border: none;
-  border-radius: 6px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background: linear-gradient(to bottom, #006cba, #00416f);
-  width: 158px;
-  text-align: center;
+  border-radius: 8px;
+  color: #fff;
   text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 6px 2px #73b09f;
+  text-align: center;
+  width: 280px;
+  margin: auto;
   transition: 0.2s ease;
-  box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.2);
   outline: none;
-  &:hover {
-    box-shadow: 0px 0px 10px 4px rgba(0,0,0, 0.5);
+  &:hover {    
     transition: 0.2s ease;
+    box-shadow: 0px 0px 20px 6px #73b09f;
   }
-  &:active {
-    opacity: 0.7; 
+  &:active {    
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 30px 6px #73b09f;
   }
 }
 

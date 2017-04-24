@@ -1,0 +1,75 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+    font-family: $font-1;
+    color: $color-1;    
+}
+
+.page__footer {
+  min-width: 320px;  
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+    min-width: 320px;    
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}
+
+.header__menu-btn {  
+  position: relative;
+  width: 45px;
+  height: 45px;  
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.header__menu-btn-line,
+.header__menu-btn-line2,
+.header__menu-btn-line3 {
+  transition: 0.2s ease-out;
+  display: block;
+  height: 3px;
+  width: 45px;
+  background: $color-2;     
+}
+
+.header__menu-btn-line--active {
+  position: absolute;
+  top: 20px;  
+  transform: rotate(45deg);  
+  height: 5px;  
+}
+
+.header__menu-btn-line2--active {
+  opacity: 0;
+  height: 0; 
+}
+
+.header__menu-btn-line3--active {
+  position: absolute;
+  top: 11px;
+  transform: rotate(-45deg);   
+  height: 5px; 
+  
+}
+
+.header__menu-btn-line2 {  
+  margin-top: 9px;  
+}
+
+.header__menu-btn-line3 {  
+  margin-top: 9px;  
+}
+
+.indicators-hide {
+  display: none !important;
+}

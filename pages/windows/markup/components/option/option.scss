@@ -1,0 +1,158 @@
+.option__wrap {
+  padding: 30px;
+}
+
+.option__ttl {
+  @include ttl;  
+  color: #444444;
+  width: 100%;
+}
+
+.option__txt {
+  font-family: $font-1-b;
+  color: $color-3;
+  font-size: 15px;
+}
+
+.option__items {
+  @include nl;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option__item {
+  @include flex;
+  align-items: center;
+  width: 190px;
+  margin: auto;
+}
+
+.option__name {    
+  color: $color-2;
+  font-size: 20px;
+  width: 190px;  
+  text-align: center;
+  hyphens: auto;
+  word-wrap: break-word;
+  
+}
+
+.option__item-txt {
+  font-family: $font-1-b;
+  color: $color-3;
+  font-size: 14px;
+  width: 190px;
+}
+
+.option__indicators {  
+  @include flex-row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 220px;
+}
+
+.option__indicator {
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  background: $color-3;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.option__indicators .active {
+  background: $color-1;
+}
+
+
+@media #{$tablet} {
+  .option__wrap {
+    max-width: $max-tablet;
+    margin: auto;
+  }
+  
+  .option__txt {
+    text-align: center;
+  }
+  
+  .option__items {
+    @include flex-row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 48px;
+  }
+  
+  .option__item {
+    margin: 0;   
+    margin-bottom: 40px;
+    &:last-of-type {
+      width: 400px;
+      margin: auto;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &:last-of-type .option__info {
+      margin-left: 20px;
+    }
+    &:last-of-type .option__name {
+      align-items: flex-start;
+      min-height: 0;     
+    }
+  }
+  
+  .option__name {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 78px;
+    flex-grow: 1;    
+  }
+}
+
+
+@media #{$desktop} {
+  .option__wrap {
+    max-width: $max-desktop;
+  }
+  
+  .option__ttl {
+    width: 752px;
+    padding-bottom: 5px;
+  }
+  
+  .option__txt {
+    font-size: 18px;
+  }
+  
+  .option__items {
+    margin: 0;
+    margin: auto;
+    width: 900px;
+  }
+  
+  .option__item:last-of-type {   
+    width: 190px;
+    margin: 0;
+    margin-top: 45px;
+    flex-direction: column;
+    &:last-of-type .option__info {
+      margin-left: 0px;
+    }
+    &:last-of-type .option__name {
+      align-items: flex-start;
+      min-height: 78px;     
+    }
+  }  
+    
+  .option__item {
+    margin-bottom: 0;
+    margin-top: 45px;
+  }
+}
